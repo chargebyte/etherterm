@@ -76,7 +76,7 @@ void MainWindow::packet_callback( uchar *self, const pcap_pkthdr *header, const 
     display_text.append("incoming packet from: ");
     display_text.append(sender.toHex());
     display_text.append(" -> ");
-    display_text.append(payload.toHex());
+    display_text.append(payload);
 
     mainwindow->ui->textBrowser->append(display_text);
     fprintf(stderr, "dataAvailable() exit\n");
