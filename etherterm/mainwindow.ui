@@ -33,6 +33,9 @@
             <height>30</height>
            </size>
           </property>
+          <property name="lineWrapMode">
+           <enum>QPlainTextEdit::NoWrap</enum>
+          </property>
          </widget>
         </item>
         <item>
@@ -45,7 +48,16 @@
        </layout>
       </item>
       <item>
-       <widget class="QTextBrowser" name="textBrowser"/>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="font">
+         <font>
+          <family>Andale Mono</family>
+         </font>
+        </property>
+        <property name="autoFormatting">
+         <set>QTextEdit::AutoNone</set>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
