@@ -170,7 +170,7 @@ void MainWindow::on_btnSend_clicked()
     packet.append((char)0x00);packet.append((char)0x00);//FMI
     packet.append((char)0x00);packet.append(0x01);packet.append(0x87);//OUI I2SE
     packet.append((char)0x00);//MME_SUBVER
-    packet.append((char)0x00);//NET
+    packet.append((char)0x00);packet.append((char)0x00);//NET
     packet.append((plainbytes_len & 0xff00) >> 8);packet.append((plainbytes_len & 0xff));//PAYL_LEN
     packet.append(this->seq_counter++);//SEQ_NUM = 0
     packet.append(plainbytes);//PAYLOAD
